@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data binding</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        var app= angular.module("myapp",[]);
+        app.controller("oneway",function($scope){
+            $scope.msg="welcome to my app by aathi";
+        });
+    </script>
+</head>
+<body>
+    <h1>Hi,Viewers</h1>
+    <div ng-controller="oneway">
+        {{msg}}
+        <br>
+        <span ng-bind="msg"></span>
+    </div>
+   
+</body>
+</html>
